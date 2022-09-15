@@ -67,14 +67,14 @@ if (isset($_POST['acao'])) {
     #centro{
       padding-left: 70px; 
     }
+    #senhacor{
+      color: black;
+    }
   </style>
 </head>
  
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <h2> GOinfo</h2>
-        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,8 +96,6 @@ if (isset($_POST['acao'])) {
       </nav>
   <br>
   <nav class="navbar navbar-expand-lg navbar-dark bg-none">
-    <a class="navbar-brand" href="#">
-      <h2> GOinfo</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -122,11 +120,11 @@ if (isset($_POST['acao'])) {
         <form action="" method="POST">
             <div class="form-group">
               <label for="exampleInputName">
-                <h4>Email</h4>
+                <h4 id="senhacor">Email</h4>
               </label>
               <input type="email" name="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp" required>
             </div>
-                <h4>Senha</h4>
+                <h4 id="senhacor">Senha</h4> 
               </label>
                   <input type="password" name="senha" class="form-control" id="exampleInputPassword" aria-describedby="senhaHelp" name="senha" required>
               </label>
