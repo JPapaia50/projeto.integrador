@@ -1,2 +1,2 @@
-# projeto.integrador
-Projeto faculdade Senac Joinville - Desenvolvimento de um sistema de vendas no nicho de peças de informática.
+# projeto_int
+projeto integrador desenvolvido no senac joinville com intuito de desenvolver um software de vendas de peças de informática
