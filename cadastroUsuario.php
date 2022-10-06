@@ -21,133 +21,193 @@ if (isset($_POST['acao'])) {
                             values (null,?,?,?);
                         ");
     if ($sql->execute(array($nome, $email, $senha))) {
-        echo 'cadastrado com sucesso';
+        echo 'Cadastrado seu fudido do caralho gordo';
     } else {
         echo 'erro ao cadastrar';
     }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
-<h<!DOCTYPE html>
 <html lang="pt-br">
- 
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-XfhC/Sid4FIGSXYebcOtcSCRFkd/zZzAMVipf0bNWucloRvcKK2/dpVWodQbQ1Ek" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
-  <link rel="stylesheet" type="text/CSS" href="estilos.CSS">
-  <!-- Meta tags Obrigatórias -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <meta charset="utf-8">
-  <style>
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
 
-    body {
-      background-repeat: no-repeat;
-      background-size: 100%;
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 2,5vw;
+    color: #4907A6;
+}
+
+.left-login-image {
+    width: 30vw;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 30px 35px;
+    background: black;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056; 
+}
+
+.card-login > h1 {
+    color: white;
+    font-weight: 800;
+    margin: 0%;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #4907A6;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
     }
- 
-    #cadastro {
-      width: 25%;
-      height: 230pt;
-      color: rgb(255, 255, 255);
-      background-color: #000000;
-      padding: 12px;
-      border: 60px;
-      border-radius: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    main.login {
+        flex-direction: column;
     }
- 
-    #check {
-      color: rgb(255, 255, 255);
+    .left-login > h1 {
+        display: none;
     }
-  </style>
+    
+.left-login {
+    width: 100%;
+    height: auto;
+}
+
+.right-login {
+    width: 100%;
+    height: auto;
+}
+
+.left-login-image{
+    width: 50vh;
+}
+
+.card-login {
+    width: 90%;
+}
+}
+    </style>
 </head>
- 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <h2> GOinfo</h2>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-     
-        
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Página Inicial</a>
-            </li>
-              <a class="nav-link" href="login.php">Login</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="cadastroUsuario.php" tabindex="-1" aria-disabled="true">Cadastre-se</a>
-          </ul>
+    <form action="" method="POST">
+    <div class="form-group">
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça Seu Cadastro<br>E fique por dentro das novidades</h1>
+            <img src="imagens/tech2.png" class="left-login-image" alt="Logo TechBox">
         </div>
-      </nav>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <center>
-  </center>
-    <div id="cadastro" class="mx-auto">
-      <div class="container mx-auto pt-10 px-10">
-        <div class="text-lg text-center font-bold mb-4">
-          
-        
-        <form action="" method="POST">
-        <div class="form-group">
-              <label for="exampleInputNome1">
-                <h4>Nome</h4>
-              </label>
-              <input type="text" name="nome" class="form-control" id="exampleInputnome" aria-describedby="emailHelp" required>
+            <div class="right-login">                
+           <div class="card-login">
+            <h1>Enviar</h1>
+            <div class="textfield">
+                <label for="usuario">Nome</label>
+                <input type="nome" name="nome" class="form-control" id="exampleInputName" aria-describedby="emailHelp" required placeholder="Nome">
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">
-                <h4>E-mail</h4>
-              </label>
-              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            <div class="textfield">
+                <label for="usuario">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp" required placeholder="Email">
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">
-                <h4>Senha</h4>
-              </label>
-              <input type="password" name="senha" class="form-control" id="password" name="senha" required>
+            <div class="textfield">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" class="form-control" id="exampleInputPassword" aria-describedby="senhaHelp" name="senha" required placeholder="Senha">
             </div>
-            <button type="reset" class="btn btn-danger btn-lg">Cancelar</button>
-            <button type="submit" name="acao" value="Cadastrar" class="btn btn-success btn-lg">Cadastrar</button>
-            <div> 
-            <a href="login.php" class="link-light">Ja tem cadastro? Fazer login</a>
+            <a href="login.php"><button class="btn-login" name="acao">Login</button></a>
+            </form>
             </div>
-          </form>
         </div>
-      </div>
     </div>
-    <br>
-
-
- 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-   
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
- 
-</html>
-
+</div>
+</body>
 </html>
