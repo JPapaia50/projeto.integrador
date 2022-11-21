@@ -17,11 +17,11 @@ if (isset($_POST['acao'])) {
     } else {
         $ativo = false;
     }
-    $sql = $pdo->prepare("INSERT INTO login (codigo, nome, email, senha)
-                            values (null,?,?,?);
+    $sql = $pdo->prepare("INSERT INTO login ( nome, email, senha)
+                            values (?,?,?)
                         ");
     if ($sql->execute(array($nome, $email, $senha))) {
-        echo 'Cadastrado seu fudido do caralho gordo';
+        echo 'Cadastrado';
     } else {
         echo 'erro ao cadastrar';
     }

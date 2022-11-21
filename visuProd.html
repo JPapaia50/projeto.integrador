@@ -24,7 +24,7 @@
         --gray: #ededed;
         }
         .body{
-            background-color: black;
+            background-color: purple;
         }
         
         .logo img{
@@ -33,16 +33,16 @@
         }
         .menu-item a img{
             width: 26px;
-            background-color: black;
+            background-color: purple;
 
         }
         .menu-item a{
             margin-left: 30px;
         }
         .content{
-            width: 50%;
-            height: 100vh;
-            padding: 0 5%;
+            width: 100%;
+            height: 25vh;
+            padding: 0 0%;
             display: flex;
         }
         .left-side{
@@ -63,7 +63,7 @@
         .left-side span{
             font-size: 40px;
             font-weight: 500;
-            color: black;
+            color: purple;
         }
         .left-side a{
             text-decoration: none;
@@ -77,22 +77,25 @@
         .left-side a:hover {
             transition: background, color 0.6s;
             background: #B94CE1;
-            color: white;
+            color: black;
         }
         nav {
       width: 100%;
-      height: 125px;
+      height: 100px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      background-color: #382664;
     }
     .brand {
       font-size: 35px;
       color: white;
       cursor: pointer;
       font-family: 'Lato', sans-serif;
-      align-items: center;
+      background-color: #382664;
+      padding-right: 25%;
+      margin-left: 40px;
     }
 
     .brand strong {
@@ -101,12 +104,15 @@
       cursor: pointer;
       font-family: 'Lato', sans-serif;
       align-items: center;
+      background-color: #382664;
     }
 
     nav ul {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center;   
+      background-color: #382664;
+
     }
 
     nav ul li {
@@ -114,17 +120,21 @@
       padding: 10px;
       cursor: pointer;
       align-items: center;
+      background-color: #382664;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
       align-items: center;
+      background-color: #382664;
+      padding-top: 10%;
     }
 
     nav ul li a:hover {
       color: #9400d3;
       align-items: center;
+      padding-top: 10%;
     }
 
     nav ul button {
@@ -137,6 +147,11 @@
       font-weight: bold;
       border-radius: 4px;
       align-items: center;
+      background-color: #382650;
+    }
+    nav ul a{
+      background-color: #382664;
+      margin-top: -10%;
     }
 
 
@@ -146,6 +161,27 @@
       color: white;
       align-items: center;
     }
+    .content-1{
+      width: 100%;
+      padding: 0 5%;
+      display: inline-block;
+    }
+    .ima img{
+      width: 500px;
+      height: 400px;
+    }
+ 
+    main{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ima{
+     display: inline-block;
+     padding: 0 10%;
+    }
+    
 
     </style>
 </head>
@@ -165,7 +201,7 @@
                   </nav>
                 </div>
     <main>
-        <div class="content">
+        <div class="content-1">
             <div class="left-side">
                 <h1>Headphone Hyperx</h1>
                 <h1>Cloud Revolver S</h1>
@@ -173,12 +209,19 @@
                 <p>ótimo headphone para momentos nos games inesquecivel e o vinay é um bananinha</p>
                 <span>R$699,00</span>
                 <a href="">Adicinar ao carrinho</a>
-            </div>
-
+         </div>
+         </div>
+          <div class="ima">
+            <img src="imagens/acer2.jpeg" alt="">
+          </div>
+      
             <div class="rigth-side">
             </div>
         </div>
     </main>
 </header>
+<br>
+<br>
+<br>
 </body>
 </html>
