@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>produtos CPUS disponiveis</title>
-</head>
-<body>
-    <h1>processadores disponiveis</h1>
-    
-</body>
-</html>
+<?php
+include __DIR__ . "./header.php"
+?>
+<h1>processadores disponiveis</h1>
+
+<?php
+include __DIR__ . "./footer.php"
+?>
